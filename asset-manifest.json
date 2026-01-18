@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/dz10-phonebook/static/css/main.50cc32ed.css",
-    "main.js": "/dz10-phonebook/static/js/main.10c97c46.js",
-    "static/media/noContactsYet.jpg": "/dz10-phonebook/static/media/noContactsYet.984719bde3449d0091cf.jpg",
-    "index.html": "/dz10-phonebook/index.html",
-    "main.50cc32ed.css.map": "/dz10-phonebook/static/css/main.50cc32ed.css.map",
-    "main.10c97c46.js.map": "/dz10-phonebook/static/js/main.10c97c46.js.map"
+    "main.css": "/dz17-react/static/css/main.50cc32ed.css",
+    "main.js": "/dz17-react/static/js/main.bf360b89.js",
+    "static/media/noContactsYet.jpg": "/dz17-react/static/media/noContactsYet.984719bde3449d0091cf.jpg",
+    "index.html": "/dz17-react/index.html",
+    "main.50cc32ed.css.map": "/dz17-react/static/css/main.50cc32ed.css.map",
+    "main.bf360b89.js.map": "/dz17-react/static/js/main.bf360b89.js.map"
   },
   "entrypoints": [
     "static/css/main.50cc32ed.css",
-    "static/js/main.10c97c46.js"
+    "static/js/main.bf360b89.js"
   ]
 }
