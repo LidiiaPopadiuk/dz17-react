@@ -1,18 +1,16 @@
-import { Component } from "react";
 
-export class Filter extends Component {
+export const Filter = ({ filterData }) => {
 
-    filterNames = () => {
+    const filterNames = () => {
         const inputFilter = document.querySelector("#filterInput")
         const inputValue = inputFilter.value
-        this.props.filterData(inputValue)
+        filterData(inputValue)
     }
-    render() {
-        return(
-            <div>
-                <p>Find contacts by name</p>
-                <input onInput={this.filterNames} id="filterInput" type="text" />
-            </div>
-        )
-    }
+
+    return (
+        <div>
+            <p>Find contacts by name</p>
+            <input onInput={filterNames} id="filterInput" type="text" />
+        </div>
+    )
 }

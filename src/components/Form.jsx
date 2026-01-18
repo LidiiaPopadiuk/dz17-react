@@ -1,24 +1,22 @@
-import { Component } from "react";
+
 import x from './Form.module.css'
 
 
-export class Form extends Component {
+export const Form = ({inputData}) => {
 
-    inputData = () => {
+    const inputData2 = () => {
         const dataFromInput = document.querySelector('#input')
         const valueFromInput = dataFromInput.value
 
         const dataFromInput2 = document.querySelector('#input2')
         const valueFromInput2 = dataFromInput2.value
 
-        this.props.inputData(valueFromInput, valueFromInput2)
+        inputData(valueFromInput, valueFromInput2)
 
         dataFromInput.value = ''
         dataFromInput2.value = ''
-
-        // this.props.telData(valueFromInput2)
     }
-    render() {
+
         return (
             <form className={x.formClas}>
 
@@ -43,8 +41,7 @@ export class Form extends Component {
                     required
                 />
 
-                <button type="button" onClick={this.inputData}>Add Contact</button>
+                <button type="button" onClick={inputData2}>Add Contact</button>
             </form>
         )
-    }
 }
