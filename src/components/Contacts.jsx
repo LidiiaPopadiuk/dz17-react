@@ -2,6 +2,8 @@
 import contactsImg from '../img/noContactsYet.jpg'
 
 export const Contacts = ({ deleteData, contacts, filter }) => {
+    console.log('contacts', contacts);
+    
 
     const deleteContact = (e) => {
         const contactId = e.target.id

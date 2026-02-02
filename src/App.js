@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Form } from "./components/Form";
 import { Contacts } from "./components/Contacts";
 import { Filter } from "./components/Filter";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import styled from "styled-components";
+import { useContacts } from "./hooks/useContacts";
 
 const Title = styled.h2`
   margin-bottom: 20px;
@@ -21,65 +22,53 @@ const Div = styled.div`
 `;
 
 export const App = () => {
-  const [contacts, setContacts] = useState([]);
-  const [filter, setFilter] = useState("");
+  const {contacts, filter, inputData, deleteData, filterData} = useContacts()
+
+  // const [contacts, setContacts] = useState([]);
+  // const [filter, setFilter] = useState("");
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  // state = {
-  //   contacts: [],
-  //   filter: "",
-  //   name: "",
-  //   number: "",
+
+
+  // const inputData = (name, number) => {
+  //   const nameUpper = name.toUpperCase();
+  //   const numberUpper = number;
+
+  //   const nameExist = contacts.some((contact) => {
+  //     return contact.name.toUpperCase() === nameUpper;
+  //   });
+
+  //   const numberExist = contacts.some((contact) => {
+  //     return contact.number === numberUpper;
+  //   });
+
+  //   if (nameExist) {
+  //     alert(`${name} is already in contacts!`);
+  //     return;
+  //   }
+
+  //   if (numberExist) {
+  //     alert(`${numberUpper} is already exist!`);
+  //     return;
+  //   }
+
+  //   const objectValue = {
+  //     name: name,
+  //     number: number,
+  //     id: nanoid(),
+  //   };
+
+  //   setContacts((prev) => [...prev, objectValue]);
+
   // };
 
-  const inputData = (name, number) => {
-    const nameUpper = name.toUpperCase();
-    const numberUpper = number;
+  // const deleteData = (id) => {
+  //   setContacts((prev) => prev.filter((contact) => contact.id !== id));
+  // };
 
-    const nameExist = contacts.some((contact) => {
-      return contact.name.toUpperCase() === nameUpper;
-    });
-
-    const numberExist = contacts.some((contact) => {
-      return contact.number === numberUpper;
-    });
-
-    if (nameExist) {
-      alert(`${name} is already in contacts!`);
-      return;
-    }
-
-    if (numberExist) {
-      alert(`${numberUpper} is already exist!`);
-      return;
-    }
-
-    const objectValue = {
-      name: name,
-      number: number,
-      id: nanoid(),
-    };
-
-    setContacts((prev) => [...prev, objectValue]);
-
-    // this.setState(
-    //   (prevState) => ({
-    //     contacts: [...prevState.contacts, objectValue],
-    //   }),
-    //   () => {
-    //     console.log(this.state);
-    //   }
-    // );
-    // console.log(this.state);
-  };
-
-  const deleteData = (id) => {
-    setContacts((prev) => prev.filter((contact) => contact.id !== id));
-  };
-
-  const filterData = (value) => {
-    setFilter(value)
-  };
+  // const filterData = (value) => {
+  //   setFilter(value)
+  // };
 
   return (
     <Div className="App">
@@ -95,5 +84,5 @@ export const App = () => {
     </Div>
   );
 };
-// telData={this.telData}
+
 export default App;
